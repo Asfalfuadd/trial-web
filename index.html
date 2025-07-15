@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PortoVall.io</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6TaYFAW2iQfRzZYPmkk4phtYL/LEsH4wNe4GcBxC9+Nd/Arp+6g==>" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <h1>PortoVall.io</h1>
+      </div>
+
+    <div class="menu-wrapper">
+      <nav class="sidebar-menu">
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Me</a></li>
+      </nav>
+    </div>
+    </aside>
+
+
+    <!-- Home Content -->
+    <section id="home">
+      <div class="home-content container">
+        <h1 class="hero-title">Asfal Is Here!</h1>
+        <p class="hero-subtitle">Wanted to be a Full stack Dev</p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/asfalfuad" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Asfalfuadd" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/asfaall__" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:asfalfuad32@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-me container">
+        <div class="about-heading-section">
+          <h2 class="about-heading hidden">About Me</h2>
+        </div>
+        <div class="about-content about-image-below-heading">
+          <img src="images/profile.jpeg" alt="Porfile pict" class="profile-pict">
+          <div class="about-main-content">
+            <div class="about-content">
+              <h3 class="intro-name">Hello there! I'm Asfal Fuad.</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project & Skills Section -->
+    <section id="projects">
+      <div class="portofolio container">
+        <div class="proj-heading-section">
+          <h2 class="proj-heading hidden">My Projects & Skills</h2>
+          <p clss="proj-subtitle hidden">Explore a selection of my recent work and the technologies I'm proficient in.</p>
+        </div>
+      </div>
+
+      <div class="proj-buttons">
+        <button class="tab-button a" data-tab="projects-tab">
+          <i class="fas fa-project-diagram"></i> Projects</button>
+        <button class="tab-button b" data-tab="skills-tab">
+          <i class="fas fa-code"></i> Skills</button>
+      </div>
+
+      <div id="projects-tab" class="tab-content active">
+        <div class="proj-content container">
+          <div class="proj-grid">
+            <div class="proj-item">
+              <img src="images/project1.png" alt="Project 1"/>
+              <div class="proj-info">
+                <h3>Project 1</h3>
+                <p>This Website</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="skills-tab" class="tab-content">
+        <div class="skills-grid">
+          <div class="skills-category">
+            <i class="fas fa-laptop-code"></i>
+            <h3>My Programming Skills</h3>
+            <li class="skill-item">
+              <div class="skill-name-icon">
+                <i class="fab fa-html5"></i> HTML
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-progress="10"></div>
+              </div>
+              <span class="skill-percentage">10%</span>
+          </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name-icon">
+                <i class="fab fa-css3-alt"></i> CSS
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-progress="10"></div>
+              </div>
+              <span class="skill-percentage">10%</span>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name-icon">
+                <i class="fab fa-python"></i> Python
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar" data-progress="20"></div>
+              </div>
+              <span class="skill-percentage">20%</span>
+            </li>
+        </div>
+      </div>
+    </section>
+
+        <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-content">
+          <h2 class="hidden">Get in Touch</h2>
+          <p class="mail hidden">Feel free to reach out for collaborations or just a friendly chat!</p>
+
+          <div class="contact-grid">
+            <div class="contact-card hidden">
+                <h3><i class="fas fa-envelope"></i> Contact Me</h3>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-edit"></i>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-card connect-with-me hidden">
+                <h3><i class="fas fa-share-alt"></i> Connect With Me</h3>
+                <div class="social-links-grid">
+                    <a href="https://www.linkedin.com/in/asfalfuad" target="_blank" class="social-link-item">
+                        <i class="fab fa-linkedin-in"></i>
+                        <div class="text-content">
+                            <strong>LinkedIn</strong>
+                            <span>asfalfuad</span>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/asfaall__" target="_blank" class="social-link-item">
+                        <i class="fab fa-instagram"></i>
+                        <div class="text-content">
+                            <strong>Instagram</strong>
+                            <span>@asfaall__</span>
+                        </div>
+                    </a>
+                    <a href="mailto:asfalfuad@example.com" target="_blank" class="social-link-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="text-content">
+                            <strong>Email</strong>
+                            <span>asfalfuad@example.com</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Asfalfuadd" target="_blank" class="social-link-item">
+                        <i class="fab fa-github"></i>
+                        <div class="text-content">
+                            <strong>Github</strong>
+                            <span>@Asfalfuadd</span>
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@svall05" target="_blank" class="social-link-item">
+                        <i class="fab fa-tiktok"></i>
+                        <div class="text-content">
+                            <strong>Tiktok</strong>
+                            <span>@svall05</span>
+                        </div>
+                    </a>
+                    <a href="https://x.com/asfalfuad" target="_blank" class="social-link-item">
+                        <i class="fab fa-twitter"></i>
+                        <div class="text-content">
+                            <strong>X (Twitter)</strong>
+                            <span>@asfalfuad</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-card hidden">
+                <h3><i class="fas fa-comment"></i> Comments & Suggestions</h3>
+                <form action="#" method="POST" class="comment-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-comment-dots"></i>
+                        <textarea placeholder="Your Comment/Suggestion" rows="4" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-paperclip"></i>
+                        <label for="file-upload" class="custom-file-upload">
+                            Upload File (Optional)
+                        </label>
+                        <input id="file-upload" type="file"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Comment</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div>
+    <footer>
+      <div class="contaienr footer-content">
+        <P>© 2025 PortoVall.io All Rights Reserved</P>
+      </div>
+    </footer>
+    
+  </div>
+  </body>
+
+</html>
