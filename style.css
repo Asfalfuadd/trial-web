@@ -1,0 +1,785 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset CSS dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f2f5; /* Warna latar belakang utama - Putih keabu-abuan */
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+  min-height: 100vh; /* Pastikan body mengambil setidaknya tinggi viewport penuh */
+  display: flex; /* Aktifkan flexbox pada body */
+  flex-direction: column; /* Tumpuk anak-anak secara vertikal */
+}
+
+header {
+  background-color: white;
+  
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #333;
+  padding: 30px 20px;
+}
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color:white;
+}
+
+.menu-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* tengah horizontal dan vertikal */
+}
+
+.sidebar-menu {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+.sidebar-menu li {
+  list-style: none;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px; /* Jarak antara ikon dan teks */
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.sidebar-menu li a i {
+  font-size: 18px;
+}
+
+/* Garis bawah di menu items */
+
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+  display: inline-block;
+  padding: 0.3rem 0;
+}
+
+.sidebar-menu a:hover {
+  color:white;
+}
+.sidebar-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px ;
+  bottom: 0px;
+  left: 0px;
+  background-color: #fff;
+  transition: width 0.3s ease-out;
+}
+
+.sidebar-menu a:hover {
+  color :aqua;
+}
+
+.sidebar-menu a:hover::after {
+  width: 100%;
+}
+
+/* Home content */
+
+#home {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 200px;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+/* Gaya tombol */
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: backgorund-color 0.3 ease;
+  display: inline-flex;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background-color: #333;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: aqua;
+  transform: translateY(-2px);
+  color: #222;
+}
+
+.btn-secondary {
+  background-color: #333;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: aqua;
+  transform: translateY(-2px);
+  color: #222;
+}
+
+/* Social links */
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 20px;
+}
+
+.social-links a{
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: aqua;
+  transform: translateY(-3px);
+}
+
+/* About me section */
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 20px;
+  margin-left: 180px;
+  padding: 20px;
+}
+
+.about-me .about-heading-section {
+  list-style: none;
+}
+
+.about-me .about-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.about-me .about-subtitle {
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.about-content .about-image-bellow-heading {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profile-pict {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #222;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5 ease;
+  max-width: 100%;
+}
+
+.profile-pict:hover {
+  transform: scale(1.1);
+}
+
+.about-main-content {
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  flex-basis: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.intro-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.about-content p{
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* Portofolio section */
+#projects {
+  height: 100vh;
+  text-align: center;
+  margin-left: 200px;
+}
+
+.portofolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.portofolio .proj-heading-section {
+  margin-top: 3rem;
+}
+
+.portofolio .proj-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.proj-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.tab-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3 ease;
+  display: inline-flex;
+  margin-bottom: 2rem;
+  background-color: #333;
+  color: white;
+  gap: 1rem;
+  align-items: center;
+}
+
+.tab-button:hover {
+  background-color: aqua;
+  color: #222;
+  transform: translateY(-2px);
+}
+
+.tab-button.a{
+  list-style: none;
+}
+
+.tab-button.b {
+  gap: 1.5rem;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  gap: 2rem;
+}
+
+/* Item Project */
+
+.proj-content {
+  background-color: none;
+}
+
+.proj-grid {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.proj-item {
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.proj-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  transform: scale(1);
+}
+
+.proj-item img {
+  width: 400px;
+  max-width: 600%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.6s ease;
+}
+
+.proj-item:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.proj-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.proj-item:hover .proj-info {
+  transform: translateY(0);
+}
+
+.proj-info h3{
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color:black;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.proj-item:hover .proj-info h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.proj-info p{
+  font-size: 0.9rem;
+  color: black;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+.proj-item:hover .proj-info p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill Section */
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 180px;
+  margin-bottom: 50px;
+}
+
+.skill-name-icon {
+  font-weight: 600;
+  min-width: 120px;
+}
+
+.skill-name-icon i{
+  font-size: 1.5rem;
+  width: 25px;
+  text-align: center;
+}
+
+.skill-bar-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #333;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+  position: relative;
+  flex-grow: 1;
+}
+
+.skill-bar {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  width: 0%; /* default */
+  transition: width 1s ease-in-out;
+  position: relative;
+}
+
+.skill-item .skill-percentage {
+  color: #ff6b6b;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  min-width: 30px;
+}
+
+/* Contact Me Section */
+
+.contact {
+  background: #f0f2f5;
+  position: relative;
+  min-height: 100vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  padding: 6rem 0;
+  margin-left: 200px;
+}
+
+.contact-content {
+  text-align: center; /* Pusatkan teks judul utama */
+  color: #333; /* Gelap */
+  max-width: 1200px; /* Lebar maksimal untuk seluruh konten kontak */
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333; /* Biru cerah */
+  margin-bottom: 0.5rem; /* Kurangi padding-bottom, ganti dengan margin-bottom */
+}
+
+.contact-content .mail {
+  color: #555; /* Abu-abu gelap */
+  font-size: 1.1rem;
+  margin-bottom: 3rem; /* Tambahkan ruang bawah untuk memisahkan dari grid */
+}
+
+/* START: Gaya untuk tata letak kolom kontak */
+.contact-grid {
+    display: grid;
+    /* Default: 2 kolom dengan lebar sama, karena "Comments & Suggestions" akan span penuh di bawah */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem; /* Jarak antar kolom */
+    align-items: flex-start; /* Sejajarkan item ke atas */
+    text-align: left; /* Kembalikan perataan teks ke kiri di dalam kartu */
+}
+
+.contact-card {
+    background-color: #ffffff; /* Latar belakang kartu - Putih */
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Pastikan kartu memiliki tinggi yang sama di baris yang sama */
+
+    /* Animasi untuk contact card */
+    /* opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out; */
+}
+
+.contact-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.contact-card h3 {
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* Penyesuaian ukuran ikon di dalam h3 contact-card */
+.contact-card h3 i {
+    font-size: 1.5rem; /* Sesuaikan ukuran ikon sesuai keinginan */
+    color: #333; /* Warna ikon - Gelap */
+}
+
+
+.contact-form, .comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8; /* Latar belakang input - Hampir putih */
+    border-radius: 5px;
+    padding: 0.6rem 1rem;
+    border: 1px solid #e0e0e0; /* Border default */
+    transition: border-color 0.3s ease;
+}
+
+.input-group:focus-within {
+    border-color: #4a90e2; /* Warna border saat fokus - Biru cerah */
+}
+
+.input-group i {
+    color: #333; /* Biru cerah */
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.input-group input,
+.input-group textarea {
+    flex-grow: 1; /* Memungkinkan input/textarea mengambil ruang yang tersedia */
+    background: none;
+    border: none;
+    outline: none;
+    color: #333; /* Gelap */
+    font-size: 1rem;
+    padding: 0.3rem 0;
+    resize: none; /* Menghilangkan fitur resize */
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #888; /* Abu-abu */
+    opacity: 0.7;
+}
+
+/* Gaya untuk input file kustom */
+.custom-file-upload {
+    background-color: rgba(74, 144, 226, 0.1); /* Biru cerah transparan */
+    color: #333; /* Biru cerah */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    border: 1px solid #4a90e2; /* Biru cerah */
+}
+
+.custom-file-upload:hover {
+    background-color: rgba(74, 144, 226, 0.2); /* Biru cerah lebih transparan */
+}
+
+/* Sembunyikan input file asli */
+.input-group input[type="file"] {
+    display: none;
+}
+
+
+.comment-item {
+    display: flex;
+    align-items: flex-start; /* Sejajarkan ikon dengan teks komentar */
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #f8f8f8; /* Hampir putih */
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.comment-avatar {
+    font-size: 2.5rem; /* Ukuran ikon avatar */
+    color: #4a90e2; /* Biru cerah */
+}
+
+.comment-text strong {
+    color: #333; /* Gelap */
+    font-size: 1rem;
+}
+
+.comment-text .comment-time {
+    font-size: 0.8rem;
+    color: #888; /* Abu-abu */
+    margin-left: 0.5rem;
+}
+
+.comment-text p {
+    font-size: 0.9rem;
+    color: #555; /* Abu-abu gelap */
+    margin-top: 0.5rem;
+    margin-bottom: 0; /* Hapus margin-bottom default dari p */
+    line-height: 1.4;
+}
+
+/* Gaya untuk "Connect With Me" */
+/* No specific grid-column for connect-with-me here, it's handled by its position in HTML and overall grid */
+.contact-card.connect-with-me {
+    margin-top: 0; /* Remove any previous margin-top */
+    padding: 2rem; /* Keep consistent padding */
+}
+
+.connect-with-me h3 {
+    margin-bottom: 1.5rem;
+    /* justify-content: center;  <-- REMOVED THIS for desktop alignment */
+}
+
+.social-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Kolom yang adaptif */
+    gap: 1rem;
+    text-align: center; /* Pusatkan teks item secara keseluruhan */
+}
+
+.social-link-item {
+    background-color: rgba(74, 144, 226, 0.1); /* Biru cerah transparan */
+    border: 1px solid #4a90e2; /* Biru cerah */
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Set to column by default for card-like look */
+    align-items: center; /* Center horizontally for column layout */
+    justify-content: center;
+    gap: 0.5rem; /* Reduced gap */
+    text-decoration: none;
+    color: #333; /* Gelap */
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    height: 100%; /* Ensure consistent height for all items in the grid */
+}
+
+.social-link-item i {
+    font-size: 2.5rem; /* Make icons larger to stand out in the card */
+    color: #333; /* Biru cerah */
+    margin-bottom: 0.5rem; /* Add some space below the icon */
+}
+
+.social-link-item .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the text content for a card-like layout */
+    line-height: 1.2;
+}
+
+.social-link-item .text-content strong {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333; /* Gelap */
+}
+
+.social-link-item span {
+    font-size: 0.8rem;
+    color: #555; /* Abu-abu gelap */
+}
+
+.social-link-item:hover {
+    background-color: rgba(74, 144, 226, 0.2); /* Biru cerah lebih transparan */
+    transform: translateY(-5px);
+    border-color: #3a7bd2; /* Biru lebih gelap */
+}
+
+/* Adjustments for the Comments & Suggestions card - now the 3rd child */
+.contact-card:nth-child(3) { /* This targets the "Comments & Suggestions" card */
+    grid-column: 1 / -1; /* Make it span the entire width of the grid */
+}
+
+/* Footer  */
+
+footer {
+  background-color: #e0e0e0;
+  color: #333;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-left: 200px;
+}
+
+/* .hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+} */
+/* 
+.show {
+  opacity: 1;
+  transform: translateY(0);
+} */
